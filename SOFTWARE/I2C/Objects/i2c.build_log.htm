@@ -1,0 +1,404 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: tran luan, no, LIC=LSNXV-PM3CG-2Z4W4-FMKWG-XSR4U-4JY42
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      UL2CM3.DLL V1.164.8.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\asion\Desktop\automotive\I2C\i2c.uvprojx
+Project File Date:  10/09/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+main.c(1): warning: In file included from...
+C:/Users/asion/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_gpio.h(31): warning: In file included from...
+C:/Users/asion/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/asion/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/asion/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+main.c(1): warning: In file included from...
+C:/Users/asion/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_gpio.h(31): warning: In file included from...
+C:/Users/asion/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(8347): warning: In file included from...
+./RTE/Device/STM32F103C8\stm32f10x_conf.h(75): warning: In file included from...
+C:/Users/asion/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_rcc.h(31): warning: In file included from...
+C:/Users/asion/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/asion/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/asion/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+main.c(1): warning: In file included from...
+C:/Users/asion/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\stm32f10x_gpio.h(31): warning: In file included from...
+C:/Users/asion/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(8347): warning: In file included from...
+./RTE/Device/STM32F103C8\stm32f10x_conf.h(96): warning: In file included from...
+C:/Users/asion/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc\misc.h(31): warning: In file included from...
+C:/Users/asion/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(18): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e. 
+                                               ^
+C:/Users/asion/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers 
+                                                                    ^
+C:/Users/asion/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include\stm32f10x.h(26): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+main.c(16): warning: // comments are not allowed in this language [-Wcomment]
+    // c?u h<EC>nh ch<E2>n scl v<E0> SDA
+    ^
+main.c(16): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // c?u h<EC>nh ch<E2>n scl v<E0> SDA
+            ^
+main.c(16): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // c?u h<EC>nh ch<E2>n scl v<E0> SDA
+                     ^
+main.c(16): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // c?u h<EC>nh ch<E2>n scl v<E0> SDA
+                                ^
+main.c(17): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    GPIO_InitStruture.GPIO_Pin = SDA_PIN | SCL_PIN; // c?u h<EC>nh output
+                                                            ^
+main.c(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // d?t tr?ng th<E1>i ban d?u l<E0> hight cho SDA v<E0> SCL
+                   ^
+main.c(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // d?t tr?ng th<E1>i ban d?u l<E0> hight cho SDA v<E0> SCL
+                                  ^
+main.c(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // d?t tr?ng th<E1>i ban d?u l<E0> hight cho SDA v<E0> SCL
+                                                      ^
+main.c(12): warning: no previous prototype for function 'I2C_SOFWARE_INIT' [-Wmissing-prototypes]
+void I2C_SOFWARE_INIT(void)
+     ^
+main.c(12): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void I2C_SOFWARE_INIT(void)
+^
+static 
+main.c(32): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // g?i l?i d? xem c<F3> b? l?i hay kh<F4>ng . kh<F4>ng quan tr?ng l?m
+                       ^
+main.c(32): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // g?i l?i d? xem c<F3> b? l?i hay kh<F4>ng . kh<F4>ng quan tr?ng l?m
+                                         ^
+main.c(32): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // g?i l?i d? xem c<F3> b? l?i hay kh<F4>ng . kh<F4>ng quan tr?ng l?m
+                                                    ^
+main.c(37): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// start th<EC> SDA v? 0 tru?c r?i m?i SCL
+           ^
+main.c(30): warning: no previous prototype for function 'I2C_Start' [-Wmissing-prototypes]
+void I2C_Start(void)
+     ^
+main.c(30): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void I2C_Start(void)
+^
+static 
+main.c(48): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// stop th<EC> SCL v? 1 tru?c r?i m?i t?i SDA
+          ^
+main.c(54): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// c<E1>c xung SCL d? d?y byte di 
+    ^
+main.c(55): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// SDA th<EC> c<F3> nhi?m v? ghi nh?n byte
+         ^
+main.c(55): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// SDA th<EC> c<F3> nhi?m v? ghi nh?n byte
+               ^
+main.c(42): warning: no previous prototype for function 'I2C_Stop' [-Wmissing-prototypes]
+void I2C_Stop(void)
+     ^
+main.c(42): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void I2C_Stop(void)
+^
+static 
+main.c(59): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+    for(int i = 0;i<8;i++)
+        ^
+main.c(59): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(61): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+         GPIO_ResetBits(I2C_PORT,SCL_PIN); // ch<E2>n scl ph?i low
+                                                ^
+main.c(63): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+         /* ki?m tra xem byte c<F3> ph?i l<E0> 1 hay 0 v<EC> khi byte l<E0> 1 th<EC> and v?i 0x80 n<F3> v?n s? l<E0> 1 c<F2>n ngu?c l?i l<E0> 0    */
+                               ^
+main.c(63): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+         /* ki?m tra xem byte c<F3> ph?i l<E0> 1 hay 0 v<EC> khi byte l<E0> 1 th<EC> and v?i 0x80 n<F3> v?n s? l<E0> 1 c<F2>n ngu?c l?i l<E0> 0    */
+                                          ^
+main.c(63): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+         /* ki?m tra xem byte c<F3> ph?i l<E0> 1 hay 0 v<EC> khi byte l<E0> 1 th<EC> and v?i 0x80 n<F3> v?n s? l<E0> 1 c<F2>n ngu?c l?i l<E0> 0    */
+                                                        ^
+main.c(63): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+         /* ki?m tra xem byte c<F3> ph?i l<E0> 1 hay 0 v<EC> khi byte l<E0> 1 th<EC> and v?i 0x80 n<F3> v?n s? l<E0> 1 c<F2>n ngu?c l?i l<E0> 0    */
+                                                                       ^
+main.c(63): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+         /* ki?m tra xem byte c<F3> ph?i l<E0> 1 hay 0 v<EC> khi byte l<E0> 1 th<EC> and v?i 0x80 n<F3> v?n s? l<E0> 1 c<F2>n ngu?c l?i l<E0> 0    */
+                                                                                ^
+main.c(63): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+         /* ki?m tra xem byte c<F3> ph?i l<E0> 1 hay 0 v<EC> khi byte l<E0> 1 th<EC> and v?i 0x80 n<F3> v?n s? l<E0> 1 c<F2>n ngu?c l?i l<E0> 0    */
+                                                                                                   ^
+main.c(63): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+         /* ki?m tra xem byte c<F3> ph?i l<E0> 1 hay 0 v<EC> khi byte l<E0> 1 th<EC> and v?i 0x80 n<F3> v?n s? l<E0> 1 c<F2>n ngu?c l?i l<E0> 0    */
+                                                                                                                ^
+main.c(63): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+         /* ki?m tra xem byte c<F3> ph?i l<E0> 1 hay 0 v<EC> khi byte l<E0> 1 th<EC> and v?i 0x80 n<F3> v?n s? l<E0> 1 c<F2>n ngu?c l?i l<E0> 0    */
+                                                                                                                        ^
+main.c(63): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+         /* ki?m tra xem byte c<F3> ph?i l<E0> 1 hay 0 v<EC> khi byte l<E0> 1 th<EC> and v?i 0x80 n<F3> v?n s? l<E0> 1 c<F2>n ngu?c l?i l<E0> 0    */
+                                                                                                                                         ^
+main.c(73): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+          byte <<= 1; // d?ch byte sang tr<E1>i d? g?i byte ti?p theo
+                                          ^
+main.c(75): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    GPIO_ResetBits(I2C_PORT,SCL_PIN); // k<E9>o xu?ng(kh<F4>ng quan tr?ng l?m)
+                                          ^
+main.c(75): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    GPIO_ResetBits(I2C_PORT,SCL_PIN); // k<E9>o xu?ng(kh<F4>ng quan tr?ng l?m)
+                                                        ^
+main.c(56): warning: no previous prototype for function 'I2C_SendByte' [-Wmissing-prototypes]
+void I2C_SendByte(uint8_t byte) // truy?n 1 byte
+     ^
+main.c(56): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void I2C_SendByte(uint8_t byte) // truy?n 1 byte
+^
+static 
+main.c(80): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+    for (int  i = 0; i < lenght; i++)
+         ^
+main.c(80): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(85): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        // x? l<FD> l?i
+               ^
+main.c(78): warning: no previous prototype for function 'I2C_SendByteS' [-Wmissing-prototypes]
+void I2C_SendByteS(uint8_t *data,uint32_t lenght) // truy?n nhi?u byte
+     ^
+main.c(78): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void I2C_SendByteS(uint8_t *data,uint32_t lenght) // truy?n nhi?u byte
+^
+static 
+main.c(80): warning: comparison of integers of different signs: 'int' and 'uint32_t' (aka 'unsigned int') [-Wsign-compare]
+    for (int  i = 0; i < lenght; i++)
+                     ~ ^ ~~~~~~
+main.c(94): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // d?t SDA th<E0>nh input n<EA>n ph?i c?u h<EC>nh l?i
+                 ^
+main.c(94): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // d?t SDA th<E0>nh input n<EA>n ph?i c?u h<EC>nh l?i
+                               ^
+main.c(94): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // d?t SDA th<E0>nh input n<EA>n ph?i c?u h<EC>nh l?i
+                                               ^
+main.c(101): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+M<F4> t?: Input with Pull-down.
+ ^
+main.c(102): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Gi?i th<ED>ch: Ch<E2>n GPIO du?c c?u h<EC>nh l<E0>m d?u v<E0>o v?i m?t di?n tr? pull-down n?i b? k<ED>ch ho?t.
+       ^
+main.c(102): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Gi?i th<ED>ch: Ch<E2>n GPIO du?c c?u h<EC>nh l<E0>m d?u v<E0>o v?i m?t di?n tr? pull-down n?i b? k<ED>ch ho?t.
+                 ^
+main.c(102): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Gi?i th<ED>ch: Ch<E2>n GPIO du?c c?u h<EC>nh l<E0>m d?u v<E0>o v?i m?t di?n tr? pull-down n?i b? k<ED>ch ho?t.
+                                      ^
+main.c(102): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Gi?i th<ED>ch: Ch<E2>n GPIO du?c c?u h<EC>nh l<E0>m d?u v<E0>o v?i m?t di?n tr? pull-down n?i b? k<ED>ch ho?t.
+                                              ^
+main.c(102): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Gi?i th<ED>ch: Ch<E2>n GPIO du?c c?u h<EC>nh l<E0>m d?u v<E0>o v?i m?t di?n tr? pull-down n?i b? k<ED>ch ho?t.
+                                                         ^
+main.c(102): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Gi?i th<ED>ch: Ch<E2>n GPIO du?c c?u h<EC>nh l<E0>m d?u v<E0>o v?i m?t di?n tr? pull-down n?i b? k<ED>ch ho?t.
+                                                                                                  ^
+main.c(103): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Khi kh<F4>ng c<F3> t<ED>n hi?u n<E0>o du?c <E1>p d?ng l<EA>n ch<E2>n n<E0>y, n<F3> s? du?c k<E9>o v? m?c th?p (GND).
+      ^
+main.c(103): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Khi kh<F4>ng c<F3> t<ED>n hi?u n<E0>o du?c <E1>p d?ng l<EA>n ch<E2>n n<E0>y, n<F3> s? du?c k<E9>o v? m?c th?p (GND).
+              ^
+main.c(103): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Khi kh<F4>ng c<F3> t<ED>n hi?u n<E0>o du?c <E1>p d?ng l<EA>n ch<E2>n n<E0>y, n<F3> s? du?c k<E9>o v? m?c th?p (GND).
+                    ^
+main.c(103): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Khi kh<F4>ng c<F3> t<ED>n hi?u n<E0>o du?c <E1>p d?ng l<EA>n ch<E2>n n<E0>y, n<F3> s? du?c k<E9>o v? m?c th?p (GND).
+                                ^
+main.c(103): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Khi kh<F4>ng c<F3> t<ED>n hi?u n<E0>o du?c <E1>p d?ng l<EA>n ch<E2>n n<E0>y, n<F3> s? du?c k<E9>o v? m?c th?p (GND).
+                                           ^
+main.c(103): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Khi kh<F4>ng c<F3> t<ED>n hi?u n<E0>o du?c <E1>p d?ng l<EA>n ch<E2>n n<E0>y, n<F3> s? du?c k<E9>o v? m?c th?p (GND).
+                                                       ^
+main.c(103): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Khi kh<F4>ng c<F3> t<ED>n hi?u n<E0>o du?c <E1>p d?ng l<EA>n ch<E2>n n<E0>y, n<F3> s? du?c k<E9>o v? m?c th?p (GND).
+                                                               ^
+main.c(103): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Khi kh<F4>ng c<F3> t<ED>n hi?u n<E0>o du?c <E1>p d?ng l<EA>n ch<E2>n n<E0>y, n<F3> s? du?c k<E9>o v? m?c th?p (GND).
+                                                                      ^
+main.c(103): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Khi kh<F4>ng c<F3> t<ED>n hi?u n<E0>o du?c <E1>p d?ng l<EA>n ch<E2>n n<E0>y, n<F3> s? du?c k<E9>o v? m?c th?p (GND).
+                                                                              ^
+main.c(103): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+Khi kh<F4>ng c<F3> t<ED>n hi?u n<E0>o du?c <E1>p d?ng l<EA>n ch<E2>n n<E0>y, n<F3> s? du?c k<E9>o v? m?c th?p (GND).
+                                                                                            ^
+main.c(105): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+    for(int i=0 ;i<8;i++)
+        ^
+main.c(105): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(107): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    byte <<= 1;//d?ch byte sang tr<E1>i
+                                  ^
+main.c(109): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    if(GPIO_ReadInputDataBit(I2C_PORT, SDA_PIN)) // n?u l<E0> bit 1 th<EC> s? v<E0>o c<F2>n bit 0 s? kh<F4>ng v<E0>o
+                                                         ^
+main.c(109): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    if(GPIO_ReadInputDataBit(I2C_PORT, SDA_PIN)) // n?u l<E0> bit 1 th<EC> s? v<E0>o c<F2>n bit 0 s? kh<F4>ng v<E0>o
+                                                                      ^
+main.c(109): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    if(GPIO_ReadInputDataBit(I2C_PORT, SDA_PIN)) // n?u l<E0> bit 1 th<EC> s? v<E0>o c<F2>n bit 0 s? kh<F4>ng v<E0>o
+                                                                               ^
+main.c(109): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    if(GPIO_ReadInputDataBit(I2C_PORT, SDA_PIN)) // n?u l<E0> bit 1 th<EC> s? v<E0>o c<F2>n bit 0 s? kh<F4>ng v<E0>o
+                                                                                      ^
+main.c(109): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    if(GPIO_ReadInputDataBit(I2C_PORT, SDA_PIN)) // n?u l<E0> bit 1 th<EC> s? v<E0>o c<F2>n bit 0 s? kh<F4>ng v<E0>o
+                                                                                                       ^
+main.c(109): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    if(GPIO_ReadInputDataBit(I2C_PORT, SDA_PIN)) // n?u l<E0> bit 1 th<EC> s? v<E0>o c<F2>n bit 0 s? kh<F4>ng v<E0>o
+                                                                                                               ^
+main.c(113): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+     GPIO_ResetBits(I2C_PORT,SCL_PIN); // nh?n byte xong th<EC> k<E9>o xu?ng m?c th?p
+                                                           ^
+main.c(113): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+     GPIO_ResetBits(I2C_PORT,SCL_PIN); // nh?n byte xong th<EC> k<E9>o xu?ng m?c th?p
+                                                                 ^
+main.c(115): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // d?t SDA th<E0>nh output  
+                 ^
+main.c(91): warning: no previous prototype for function 'I2C_ReadByte' [-Wmissing-prototypes]
+uint8_t I2C_ReadByte(void) // d?c 1 byte
+        ^
+main.c(91): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint8_t I2C_ReadByte(void) // d?c 1 byte
+^
+static 
+main.c(124): warning: variable declaration in for loop is a C99-specific feature [-Wc99-extensions]
+    for (int  i = 0; i < lenght; i++)
+         ^
+main.c(124): warning: GCC does not allow variable declarations in for loop initializers before C99 [-Wgcc-compat]
+main.c(122): warning: no previous prototype for function 'I2C_ReadByteS' [-Wmissing-prototypes]
+void I2C_ReadByteS(uint8_t *buffer,uint32_t lenght)// d?c nhi?u byte
+     ^
+main.c(122): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void I2C_ReadByteS(uint8_t *buffer,uint32_t lenght)// d?c nhi?u byte
+^
+static 
+main.c(124): warning: comparison of integers of different signs: 'int' and 'uint32_t' (aka 'unsigned int') [-Wsign-compare]
+    for (int  i = 0; i < lenght; i++)
+                     ~ ^ ~~~~~~
+main.c(163): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // SDA L<E0> input
+            ^
+main.c(173): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    // d?t SDA th<E0>nh output  
+                 ^
+main.c(177): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    return ACK; // 0 l<E0> ack , 1 l<E0> nack
+                      ^
+main.c(177): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+    return ACK; // 0 l<E0> ack , 1 l<E0> nack
+                                    ^
+main.c(180): warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char const *argv[])
+             ^
+main.c(180): warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char const *argv[])
+                               ^
+main.c(186): warning: 'return' will never be executed [-Wunreachable-code-return]
+    return 0;
+           ^
+93 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=736 RO-data=252 RW-data=0 ZI-data=1632  
+".\Objects\i2c.axf" - 0 Error(s), 93 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: GPIO Version: 1.3
+   * Component: Startup Version: 1.0.0
+   * Component: Framework Version: 3.6.0
+   * Component: GPIO Version: 3.6.0
+   * Component: RCC Version: 3.6.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103C8
+  ./RTE/_Target_1
+  C:/Users/asion/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/asion/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+  C:/Users/asion/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc
+  C:/Users/asion/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:GPIO:1.3
+      Source file:   RTE_Driver/GPIO_STM32F10x.c
+      Include file:  RTE_Driver/GPIO_STM32F10x.h
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+      Source file:   Device/Source/system_stm32f10x.c
+      Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+
+   * Component: Keil::Device:StdPeriph Drivers:Framework:3.6.0
+      Include file:  Device/StdPeriph_Driver/inc/misc.h
+      Source file:   Device/StdPeriph_Driver/src/misc.c
+      Include file:  Device/StdPeriph_Driver/templates/stm32f10x_it.h
+      Source file:   Device/StdPeriph_Driver/templates/stm32f10x_it.c
+      Source file:   Device/StdPeriph_Driver/templates/stm32f10x_conf.h
+
+   * Component: Keil::Device:StdPeriph Drivers:GPIO:3.6.0
+      Include file:  Device/StdPeriph_Driver/inc/stm32f10x_gpio.h
+      Source file:   Device/StdPeriph_Driver/src/stm32f10x_gpio.c
+
+   * Component: Keil::Device:StdPeriph Drivers:RCC:3.6.0
+      Source file:   Device/StdPeriph_Driver/src/stm32f10x_rcc.c
+      Include file:  Device/StdPeriph_Driver/inc/stm32f10x_rcc.h
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>

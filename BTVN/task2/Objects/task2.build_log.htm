@@ -1,0 +1,163 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: tran luan, no, LIC=LSNXV-PM3CG-2Z4W4-FMKWG-XSR4U-4JY42
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      UL2CM3.DLL V1.164.8.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\Users\asion\Desktop\embedded_automovie\BTVN\task2\task2.uvprojx
+Project File Date:  12/09/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+main.c(6): error: initializer element is not a compile-time constant
+ cJSON *json = cJSON_CreateObject(); 
+               ^~~~~~~~~~~~~~~~~~~~
+main.c(7): error: expected identifier
+   cJSON_AddStringToObject(json, "name", "John Doe"); 
+                                 ^
+main.c(7): error: conflicting types for 'cJSON_AddStringToObject'
+   cJSON_AddStringToObject(json, "name", "John Doe"); 
+   ^
+./cjson.h(269): note: previous declaration is here
+CJSON_PUBLIC(cJSON*) cJSON_AddStringToObject(cJSON * const object, const char * const name, const char * const string);
+                     ^
+main.c(8): error: expected identifier
+   cJSON_AddNumberToObject(json, "age", 30); 
+                                 ^
+main.c(8): error: conflicting types for 'cJSON_AddNumberToObject'
+   cJSON_AddNumberToObject(json, "age", 30); 
+   ^
+./cjson.h(268): note: previous declaration is here
+CJSON_PUBLIC(cJSON*) cJSON_AddNumberToObject(cJSON * const object, const char * const name, const double number);
+                     ^
+main.c(9): error: expected identifier
+   cJSON_AddStringToObject(json, "email", "john.doe@example.com"); 
+                                 ^
+main.c(9): error: conflicting types for 'cJSON_AddStringToObject'
+   cJSON_AddStringToObject(json, "email", "john.doe@example.com"); 
+   ^
+./cjson.h(269): note: previous declaration is here
+CJSON_PUBLIC(cJSON*) cJSON_AddStringToObject(cJSON * const object, const char * const name, const char * const string);
+                     ^
+main.c(12): error: initializer element is not a compile-time constant
+   char *json_str = cJSON_Print(json); 
+                    ^~~~~~~~~~~~~~~~~
+main.c(82): error: use of undeclared identifier 'FATFS'
+    FATFS fs;
+    ^
+main.c(83): error: use of undeclared identifier 'FIL'
+    FIL file;
+    ^
+main.c(84): error: use of undeclared identifier 'FRESULT'
+    FRESULT res;
+    ^
+main.c(90): error: use of undeclared identifier 'RES_OK'
+    if (disk_initialize(0) != RES_OK)
+                              ^
+main.c(97): error: use of undeclared identifier 'res'
+    res = f_open(&file, "test.txt", FA_WRITE | FA_CREATE_ALWAYS);
+    ^
+main.c(97): error: use of undeclared identifier 'file'; did you mean 'while'?
+    res = f_open(&file, "test.txt", FA_WRITE | FA_CREATE_ALWAYS);
+                  ^~~~
+                  while
+main.c(97): error: expected expression
+main.c(97): error: use of undeclared identifier 'FA_WRITE'
+    res = f_open(&file, "test.txt", FA_WRITE | FA_CREATE_ALWAYS);
+                                    ^
+main.c(97): error: use of undeclared identifier 'FA_CREATE_ALWAYS'
+    res = f_open(&file, "test.txt", FA_WRITE | FA_CREATE_ALWAYS);
+                                               ^
+main.c(98): error: use of undeclared identifier 'res'
+    if (res == FR_OK)
+        ^
+main.c(98): error: use of undeclared identifier 'FR_OK'
+    if (res == FR_OK)
+               ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+compiling main.c...
+".\Objects\task2.axf" - 19 Error(s), 0 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F1xx_DFP.2.4.1.pack
+                Keil.STM32F1xx_DFP.2.4.1
+                STMicroelectronics STM32F1 Series Device Support, Drivers and Examples
+   * Component: GPIO Version: 1.3
+   * Component: Startup Version: 1.0.0
+   * Component: Framework Version: 3.6.0
+   * Component: GPIO Version: 3.6.0
+   * Component: RCC Version: 3.6.0
+   * Component: SPI Version: 3.6.0
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/Device/STM32F103C8
+  ./RTE/_Target_1
+  C:/Users/asion/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/asion/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/Include
+  C:/Users/asion/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/Device/StdPeriph_Driver/inc
+  C:/Users/asion/AppData/Local/Arm/Packs/Keil/STM32F1xx_DFP/2.4.1/RTE_Driver
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil::Device:GPIO:1.3
+      Include file:  RTE_Driver/GPIO_STM32F10x.h
+      Source file:   RTE_Driver/GPIO_STM32F10x.c
+
+   * Component: Keil::Device:Startup:1.0.0
+      Source file:   Device/Source/ARM/startup_stm32f10x_md.s
+      Source file:   Device/Source/system_stm32f10x.c
+      Include file:  RTE_Driver/Config/RTE_Device.h
+      Source file:   Device/Source/ARM/STM32F1xx_OPT.s
+
+   * Component: Keil::Device:StdPeriph Drivers:Framework:3.6.0
+      Source file:   Device/StdPeriph_Driver/templates/stm32f10x_conf.h
+      Source file:   Device/StdPeriph_Driver/src/misc.c
+      Source file:   Device/StdPeriph_Driver/templates/stm32f10x_it.c
+      Include file:  Device/StdPeriph_Driver/inc/misc.h
+      Include file:  Device/StdPeriph_Driver/templates/stm32f10x_it.h
+
+   * Component: Keil::Device:StdPeriph Drivers:GPIO:3.6.0
+      Include file:  Device/StdPeriph_Driver/inc/stm32f10x_gpio.h
+      Source file:   Device/StdPeriph_Driver/src/stm32f10x_gpio.c
+
+   * Component: Keil::Device:StdPeriph Drivers:RCC:3.6.0
+      Source file:   Device/StdPeriph_Driver/src/stm32f10x_rcc.c
+      Include file:  Device/StdPeriph_Driver/inc/stm32f10x_rcc.h
+
+   * Component: Keil::Device:StdPeriph Drivers:SPI:3.6.0
+      Include file:  Device/StdPeriph_Driver/inc/stm32f10x_spi.h
+      Source file:   Device/StdPeriph_Driver/src/stm32f10x_spi.c
+Target not created.
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>

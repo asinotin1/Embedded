@@ -1,0 +1,14 @@
+--cpu Cortex-M3
+".\main.o"
+".\misc.o"
+".\stm32f10x_adc.o"
+".\stm32f10x_dma.o"
+".\stm32f10x_gpio.o"
+".\stm32f10x_rcc.o"
+".\stm32f10x_spi.o"
+".\startup_stm32f10x_md.o"
+".\system_stm32f10x.o"
+--strict --scatter ".\SPI_Hw.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\SPI_Hw.map" -o .\SPI_Hw.axf
