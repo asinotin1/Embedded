@@ -12,8 +12,16 @@
 
 Ví dụ: nếu bạn muốn sử dụng chân PA2 thì bạn phải cấp xung cho GPIO, muốn cấp xung cho GPIO thì phải cấp xung cho bus mà GPIO treo lên là APB2.
 
-* Trong VDK STM32 thì thanh ghi dùng để cấp clock là thanh ghi RCC
+  * Trong VDK STM32 thì thanh ghi dùng để cấp clock là thanh ghi RCC
 
-* Mình sử dụng thư viện chuẩn, cú pháp để cấp/không cấp clock cho một ngoại vi là: RCC_@PeriphClockCmd(A, B) , với @ là tên bus mà mình muốn cấp clock(AHB, APB1, APB2), A là ngoại vi mà mình muốn cấp clock(RCC_APB2Periph_GPIOC,....), B là cho phép cấp/không cấp (ENABLE,...).
+  * Mình sử dụng thư viện chuẩn, cú pháp để cấp/không cấp clock cho một ngoại vi là: RCC_@PeriphClockCmd(A, B) , với @ là tên bus mà mình muốn cấp clock(AHB, APB1, APB2), A là ngoại vi mà mình muốn cấp clock(RCC_APB2Periph_GPIOC,....), B là cho phép cấp/không cấp (ENABLE,...).
+  
+* B2 : Cấu hình ngoại vi cho GPIO
+  cấu hình cho GPIO có 3 thông số chính là : pin, mode, speed.
+    * Pin : Là chân mình muốn dùng (0->15)
+    * mode : loại chức năng mà bạn muốn dùng, 2 chức năng cơ bản nhất của GPIO chính là Input và Output
+          
+  
+   
 
 </details>
