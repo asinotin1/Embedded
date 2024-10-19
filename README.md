@@ -4,7 +4,7 @@
   
   ![image](https://github.com/user-attachments/assets/0c621346-dd76-4e1b-be1c-ae0e3be759b1)
   
-  B1: Cấp xung clock cho ngoại vi
+ * B1: Cấp xung clock cho ngoại vi
   Ta cần phải đọc vào diagram của mỗi loại để biết được cần phải cấp xung clock cho bus nào trên ngoại vi
   dưới đây là diagram của dòng stm32f103
   
