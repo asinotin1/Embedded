@@ -1,10 +1,13 @@
 <details>
   <summary>LESSON 1: GPIO</summary>
   Để sử dụng ngoại vi GPIO ta cần thực hiện các bước sau :
+  
   ![image](https://github.com/user-attachments/assets/0c621346-dd76-4e1b-be1c-ae0e3be759b1)
+  
   B1: Cấp xung clock cho ngoại vi
   Ta cần phải đọc vào diagram của mỗi loại để biết được cần phải cấp xung clock cho bus nào trên ngoại vi
   dưới đây là diagram của dòng stm32f103
+  
   ![image](https://github.com/user-attachments/assets/6064d888-84fb-4ada-9d8f-b8004c4eab84)
 
 Ví dụ: nếu bạn muốn sử dụng chân PA2 thì bạn phải cấp xung cho GPIO, muốn cấp xung cho GPIO thì phải cấp xung cho bus mà GPIO treo lên là APB2.
