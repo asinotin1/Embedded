@@ -56,13 +56,35 @@ void GPIO_WriteBit(GPIO_TypeDef* GPIOx, uint16_t GPIO_Pin, BitAction BitVal);
 void GPIO_Write(GPIO_TypeDef* GPIOx, uint16_t PortVal);
 </details>
 <details>
-   <summary>LESSON 2: CÁC CHUẨN GIAO TIẾP </summary>
-     1.Truyền nhận dữ liệu :
+<summary>LESSON 2: CÁC CHUẨN GIAO TIẾP </summary>
+1.Truyền nhận dữ liệu :
    Việc truyền nhận dữ liệu thực chất là việc truyền nhận các tín hiệu điện áp biểu diễn cho các bit, điện áp được truyền nhận trên các chân của Vi điều khiển.
   
   ![image](https://github.com/user-attachments/assets/242557bc-9a49-408f-89aa-11dd7f3a0a53)
 Câu hỏi được đặt ra ở đây là :ví dụ 2 bit liền kề nó có cùng mức điện áp thì làm sao MCU nhận biết được đó là 2 bit? => Đó là lí do tại sao có các kiểu giao tiếp sau đây.
-  SPI - Serial Peripheral Interface :
-     
+
+2.SPI - Serial Peripheral Interface :
+* Các bit dữ liệu được truyền nối tiếp nhau và có xung clock đồng bộ.
+
+* Giao tiếp song công, có thể truyền và nhận cùng một thời điểm.
+
+* Có chế độ 1 dây: truyền hoặc nhận
+
+* Khoảng cách truyền ngắn
+
+* Giao tiếp 1 Master với nhiều Slave.
+* kết nối với nhau bằng 4 dây
+
+![image](https://github.com/user-attachments/assets/e2144f6d-4d56-47f6-8c75-40655d24b1be)
+
+
+* Tốc độ truyền khoảng vài Mbps hoặc vài chục Mbps.
+
+![image](https://github.com/user-attachments/assets/b0e4c6b1-05f8-4360-a5e8-da50b1095606)
+
+* Với stm32f103: tần só xung là 72MHz, qua bộ chia 8(có thể chọn bộ chia 2,4,8....) -> Tốc độ bằng 9 Mbps
+* 
+
+
     
 </details>
