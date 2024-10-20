@@ -77,6 +77,23 @@ Câu hỏi được đặt ra ở đây là :ví dụ 2 bit liền kề nó có 
 
 ![image](https://github.com/user-attachments/assets/e2144f6d-4d56-47f6-8c75-40655d24b1be)
 
+Giới thiệu các dây:
+* SCK: Serial Clock. Thiết bị tạo clock là master và cung cấp clock cho slave. Sở dỉ là giao tiếp đồng bộ vì kiểu master và slave có chung 1 dây SCK để điều khiển truyền hay nhận của 2 thiết bị.
+* MOSI: Master Out Slave In . Tín hiệu tạo bởi master và Slave nhận tín hiệu.
+* MISO: Master In Slave Out. Tín hiệu tạo bởi Slave và Master nhận tín hiệu
+* SS: Select Slave. Chọn thiết bị Slave để giao tiếp. Để chọn được thì Master kéo đường SS tương ứng xuống mức 0(bình thường SS ở mức 1). Giao tiếp bằng chân chọn chip Quá trình truyền nhận SPI:
+
+![image](https://github.com/user-attachments/assets/d93ba62d-ee92-4e56-bfc7-4759f91c08c5)
+![image](https://github.com/user-attachments/assets/d0d1cfe5-a8fa-43ba-a513-fcf0eba2910c)
+
+Qúa trình truyền nhận của SPi:
+* Tùy thuộc vào bit chọn định dạng khung dữ liệu (DFF trong thanh ghi SPI_CR1), dữ liệu gửi hoặc nhận là 8 bit hoặc 16 bit. Lựa chọn này phải được thực hiện trước khi kích hoạt SPI để đảm bảo hoạt động chính xác.
+
+* Bắt đầu quá trình, master sẽ kéo chân CS của slave muốn giao tiếp xuống 0 để báo hiệu muốn truyền nhận.
+
+* Mỗi xung clock, Master sẽ gửi đi 1 bit từ thanh ghi dịch (Shift Register) của nó đến thanh ghi dịch của Slave thông qua đường MOSI. Đồng thời Slave cũng gửi lại 1 bit đến cho Master qua đường MISO.Như vậy sau 8 chu kỳ clock thì hoàn tất việc truyền và nhận 1 byte dữ liệu.
+![image](https://github.com/user-attachments/assets/d4a7f903-68b0-4969-be62-7ff8f5c2e1e5)
+
 
 * Tốc độ truyền khoảng vài Mbps hoặc vài chục Mbps.
 
