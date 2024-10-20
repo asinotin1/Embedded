@@ -57,8 +57,12 @@ void GPIO_Write(GPIO_TypeDef* GPIOx, uint16_t PortVal);
 </details>
 <details>
    <summary>LESSON 2: CÁC CHUẨN GIAO TIẾP </summary>
-        <details>
-          <summary> SPI: </summary>
-          
-        </details>
+     1.Truyền nhận dữ liệu :
+   Việc truyền nhận dữ liệu thực chất là việc truyền nhận các tín hiệu điện áp biểu diễn cho các bit, điện áp được truyền nhận trên các chân của Vi điều khiển.
+  
+  ![image](https://github.com/user-attachments/assets/242557bc-9a49-408f-89aa-11dd7f3a0a53)
+Câu hỏi được đặt ra ở đây là :ví dụ 2 bit liền kề nó có cùng mức điện áp thì làm sao MCU nhận biết được đó là 2 bit? => Đó là lí do tại sao có các kiểu giao tiếp sau đây.
+  SPI - Serial Peripheral Interface :
+     
+    
 </details>
