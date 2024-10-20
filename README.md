@@ -57,4 +57,8 @@ void GPIO_Write(GPIO_TypeDef* GPIOx, uint16_t PortVal);
 </details>
 <details>
    <summary>LESSON 2: CÁC CHUẨN GIAO TIẾP </summary>
+        <details>
+          <summary> SPI: </summary>
+          
+        </details>
 </details>
