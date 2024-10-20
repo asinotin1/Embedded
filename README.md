@@ -106,7 +106,15 @@ Các mode trong SPI :
 ![image](https://github.com/user-attachments/assets/b0e4c6b1-05f8-4360-a5e8-da50b1095606)
 
 * Với stm32f103: tần só xung là 72MHz, qua bộ chia 8(có thể chọn bộ chia 2,4,8....) -> Tốc độ bằng 9 Mbps
-* 
+* Ưu, nhược điểm của chuẩn giao tiếp SPI.
+  Ưu điểm:
+ + Không có hệ thống định địa chỉ slave phức tạp như I2C
+ + Tốc độ truyền dữ liệu cao hơn I2C (nhanh gần gấp đôi)
+ + Hỗ trợ truyền dữ liệu hai chiều đồng thời (full-duplex), giúp tăng hiệu suất giao tiếp.
+Nhược điểm:
+ + Sử dụng bốn dây (I2C và UART sử dụng hai dây).
+ + Chỉ cho phép một master duy nhất.
+ + khoảng cách truyền ngắn
 
 
     
