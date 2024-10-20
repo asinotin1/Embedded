@@ -94,7 +94,13 @@ Qúa trình truyền nhận của SPi:
 * Mỗi xung clock, Master sẽ gửi đi 1 bit từ thanh ghi dịch (Shift Register) của nó đến thanh ghi dịch của Slave thông qua đường MOSI. Đồng thời Slave cũng gửi lại 1 bit đến cho Master qua đường MISO.Như vậy sau 8 chu kỳ clock thì hoàn tất việc truyền và nhận 1 byte dữ liệu.
 ![image](https://github.com/user-attachments/assets/d4a7f903-68b0-4969-be62-7ff8f5c2e1e5)
 
-
+Các mode trong SPI :
+* CPOL:
+   + Bằng 0 thì lúc mặc định là 0. Muốn tạo ra clock để báo hiệu truyền nhận thì ta kéo nó từ 0 lên 1 rồi về 0 là tạo ra 1 xung clock để truyền nhận 1 bit
+   + Bằng 1 thì lúc mặc định là 1. Muốn tạo ra clock để báo hiệu truyềnn nhận thì ta kéo nó từ 1 xuống 0 rồi về 1 là tạo ra 1 xung clock để truyền nhận 1 bit.
+*CPHA:
+   + Bằng 0 :Bit dữ liệu đầu ra sẽ rơi vào cạnh xung đầu tiên của chu kì.
+   + Bằng 1 :Bit dữ liệu đầu ra sẽ rơi vào cạnh xung thứ hai của chu kì.
 * Tốc độ truyền khoảng vài Mbps hoặc vài chục Mbps.
 
 ![image](https://github.com/user-attachments/assets/b0e4c6b1-05f8-4360-a5e8-da50b1095606)
