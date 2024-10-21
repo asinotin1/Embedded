@@ -141,4 +141,5 @@ Nhược điểm:
 
 ![image](https://github.com/user-attachments/assets/77fad496-755b-498c-beb2-17035689a3cc)
 
+3.UART - Universal Asynchronous Receiver-Transmitter
 </details>
