@@ -135,8 +135,8 @@ Nhược điểm:
   + Đầu tiên phải có bit start condition( SDA kéo xuống mức 0 trước SCL để tạo ra tín hiệu, bình thường 2 dây này ở mức 1 tại vì nó được gắn vào điện trở kéo lên nguồn).
   + Tiếp theo là 7 or 10 bit địa chỉ(tùy thuộc vào chip) và 1 bit w/r.
   + Phải gửi địa chỉ vì nó cùng 1 lúc truyền nhận nhiều thiết bị, để phân biệt chúng thì mỗi con phải có 1 địa chỉ, khi nó truyền bit địa chỉ thì tất cả sẽ được nhận m, thiết bị nào ứng với địa chỉ đó thì sẽ biết là sắp có quá trình truyền/nhận. Còn bit R/W để nó nói với slave tương ứng với địa chỉ đó là nó sẽ truyền hay đọc dữ liệu(0:Read là master sẽ đọc được trạng thái của Slave, 1.Write:master viết data cho slave).
- + tiếp theo sẽ là bit ACK/NACK nếu slave nào đó gửi lại 1 bit ack điều đó có nghĩa là địa chỉ đã đúng master sẽ gửi tiếp 8 bit data, sau khi đã gửi xong 8 bit data thì bên slave lại gửi tiếp bit ACK( nếu như đã nhận đủ và thành công) hoặc bit NACK(nếu không nhận được hoặc bị lỗi khung truyền)
- + kết thúc sẽ là 1 bit stop nó sẽ kéo SDA lên mức 1 trong khi SCL vẫn ở mức 1
+  + tiếp theo sẽ là bit ACK/NACK nếu slave nào đó gửi lại 1 bit ack điều đó có nghĩa là địa chỉ đã đúng master sẽ gửi tiếp 8 bit data, sau khi đã gửi xong 8 bit data thì bên slave lại gửi tiếp bit ACK( nếu như đã nhận đủ và thành công) hoặc bit NACK(nếu không nhận được hoặc bị lỗi khung truyền)
+  + kết thúc sẽ là 1 bit stop nó sẽ kéo SDA lên mức 1 trong khi SCL vẫn ở mức 1
 * lưu ý : master hoàn toàn kiểm soát SCL , slave chỉ hoạt động theo
 
 ![image](https://github.com/user-attachments/assets/77fad496-755b-498c-beb2-17035689a3cc)
