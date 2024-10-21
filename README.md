@@ -117,7 +117,18 @@ Nhược điểm:
  + Sử dụng bốn dây (I2C và UART sử dụng hai dây).
  + Chỉ cho phép một master duy nhất.
  + khoảng cách truyền ngắn
+3.I2C - Inter-Integrated Circuit :
+![image](https://github.com/user-attachments/assets/52911af4-be37-4c2d-b485-5825a446ee31)
 
 
-    
+* I2C là một giao thức truyền thông nối tiếp đồng bô, nên các bit dữ liệu truyền đi được đồng bộ hóa với xung nhịp do Master điều khiển.
+* I2C có 2 dây đó là SCL và SDA vào điện trở kéo lên nguồn:
+   + SDA (Serial Data) - đường truyền cho master và slave để gửi và nhận dữ liệu.
+   + SCL (Serial Clock) - đường mang tín hiệu xung nhịp.
+* Hoạt động ở chế độ bán song công(tức là tại một thời điểm thì nó chỉ có thể truyền hoặc nhận, nếu muốn nhận phải đợi truyền xong).
+* Bán song công vì: nó chỉ có 2 dây 1 là SCL(clock) và 1 dây là SDA để truyền, chỉ có 1 dây nên không thể 1 lúc mà vừa truyền vừa nhận dữ liệu được.
+* I2C nó không truyền theo từng bit giống như SPI mà nó sẽ truyền theo từng frame
+* I2C giao tiếp bằng địa chỉ Data frame của I2C:
+![image](https://github.com/user-attachments/assets/710a093c-52fe-4746-ba7f-c6cba82ec170)
+
 </details>
