@@ -138,6 +138,7 @@ Nhược điểm:
  + tiếp theo sẽ là bit ACK/NACK nếu slave nào đó gửi lại 1 bit ack điều đó có nghĩa là địa chỉ đã đúng master sẽ gửi tiếp 8 bit data, sau khi đã gửi xong 8 bit data thì bên slave lại gửi tiếp bit ACK( nếu như đã nhận đủ và thành công) hoặc bit NACK(nếu không nhận được hoặc bị lỗi khung truyền)
  + kết thúc sẽ là 1 bit stop nó sẽ kéo SDA lên mức 1 trong khi SCL vẫn ở mức 1
 * lưu ý : master hoàn toàn kiểm soát SCL , slave chỉ hoạt động theo
+
 ![image](https://github.com/user-attachments/assets/77fad496-755b-498c-beb2-17035689a3cc)
 
 </details>
