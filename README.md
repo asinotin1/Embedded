@@ -142,4 +142,24 @@ Nhược điểm:
 ![image](https://github.com/user-attachments/assets/77fad496-755b-498c-beb2-17035689a3cc)
 
 3.UART - Universal Asynchronous Receiver-Transmitter
+* là một giao thức truyền thông phần cứng dùng giao tiếp nối tiếp không đồng bộ và có thể cấu hình được tốc độ
+* UART chỉ 2 thiết bị với nhau(giao tiếp 1 - 1)
+* uart là truyền thông bất đồng bộ nên 2 chủ thể có thể biết mà tương tác với nhau thì dựa vào baudrate. Khác baudrate vẫn truyền được nhưng dư liệu truyền, nhận sẽ bị sai.
+* tốc độ truyền của UART được đặt ở một số chuẩn, chẳng hạn như 9600, 19200, 38400, 57600, 115200 baud và các tốc độ khác
+* UART :
+   + 2 dây TX,RX
+   + một master và một slave
+   + Quá trình truyền dữ liệu thường sẽ diễn ra ở 3.3V hoặc 5V
+* UART truyền dữ liệu nối tiếp, theo 1 trong 3 chế độ:
+   * Simplex: Chỉ tiến hành giao tiếp một chiều.
+   * Half duplex: Dữ liệu sẽ đi theo một hướng tại 1 thời điểm
+   * Full duplex: Thực hiện giao tiếp đồng thời đến và đi từ mỗi master và slave
+* Data frame UART :
+![image](https://github.com/user-attachments/assets/1921d7c6-365c-400d-9a6e-e86cc09c2a26)
+* Để bắt đầu truyền nhận khi có Start Bit(kéo TX từ 1->0).
+* có 5 đến 9 bit dữ liệu.
+* 0 to 1 Parity bit (bit chẵn lẻ).
+   * Bit chẵn lẻ kiểm tra xem dữ liệu nhận đúng hay chưa.
+   * Quy luật chẵn: nếu tổng số bit 1 là số chẵn thì bit đó là 0, còn quy luật lẻ là nếu tổng sốt bit lẻ là số chẵn thì thêm số 1.
+* 1 hoặc 2 stop bit(kéo chân Rx lên 1).
 </details>
