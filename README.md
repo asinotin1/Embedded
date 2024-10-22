@@ -177,6 +177,7 @@ Nhược điểm:
 1.SPI - HARDWARE :
   * STM32F1 có 2 khối SPI, SPI1 ở APB2 và SPI2 ở PAB1. Các khối này được xây dựng các kết nối, driver và các hàm riêng trong bộ thư viện chuẩn.
   b1. đầu tiên phải cấu hình chân SPI  bằng cách đọc datasheet :
+
     vd : tôi chọn SPI1 thì cần cấu hình chân này :
     
     ![image](https://github.com/user-attachments/assets/1cd6a87e-6546-4b3b-ad23-059c1cce3af7)
@@ -192,4 +193,6 @@ Nhược điểm:
 * Một số hàm và cờ quan trọng :
 ![image](https://github.com/user-attachments/assets/f585370b-cb97-4191-8fc7-e982ac4a3744)
 
+2. I2C - HARDWARE :
+  
 </details>
