@@ -170,7 +170,25 @@ Nhược điểm:
    + SOFTWARE : thường dùng để mô phỏng lại quá trình giao thức đó hoạt động mà không cần phải sử dụng đến chân có sẵn trong mạch mà vẫn có thể biến các chân GPIO thành nó hay còn gọi là giả lập giao thức (em có để mô phỏng ở trên)
     
    + HARDWARE : dùng các chân được tích hợp trong mạch giúp dễ dàng triển khai các chức năng của giao thức
+  * datasheet :
 
-* SPI - HARDWARE :
+    ![image](https://github.com/user-attachments/assets/2f4bdc01-1db4-4740-8d18-1290caf3221a)
+
+1.SPI - HARDWARE :
+  * STM32F1 có 2 khối SPI, SPI1 ở APB2 và SPI2 ở PAB1. Các khối này được xây dựng các kết nối, driver và các hàm riêng trong bộ thư viện chuẩn.
+  b1. đầu tiên phải cấu hình chân SPI  bằng cách đọc datasheet :
+    vd : tôi chọn SPI1 thì cần cấu hình chân này :
+    
+    ![image](https://github.com/user-attachments/assets/1cd6a87e-6546-4b3b-ad23-059c1cce3af7)
+  b2. cấu hình tham số của SPI :
+
+  ![image](https://github.com/user-attachments/assets/a17aac75-2ff3-498a-8cf7-a7f751b2ae0f)
+
+  b3. tùy hình vào cấu hình truyền hoặc nhận ta sẽ có các hàm khác nhau :
   
+  ![image](https://github.com/user-attachments/assets/c0488c58-6527-40ca-85bb-97e7bfdbc230)
+  
+* Một số hàm và cờ quan trọng :
+![image](https://github.com/user-attachments/assets/f585370b-cb97-4191-8fc7-e982ac4a3744)
+
 </details>
