@@ -230,5 +230,7 @@ Nhược điểm:
 + một số cờ quan trọng :
 
 ![image](https://github.com/user-attachments/assets/22253543-2810-4578-acc6-7e216f89fb2e)
-
+</details>
+<details>
+  <summary>LESSON 3: Ngắt ngoài và ngắt truyền thông</summary>
 </details>
