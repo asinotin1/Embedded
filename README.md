@@ -163,3 +163,6 @@ Nhược điểm:
    * Quy luật chẵn: nếu tổng số bit 1 là số chẵn thì bit đó là 0, còn quy luật lẻ là nếu tổng sốt bit lẻ là số chẵn thì thêm số 1.
 * 1 hoặc 2 stop bit(kéo chân Rx lên 1).
 </details>
+<details>
+  <sumary> </sumary>
+</details>
