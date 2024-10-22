@@ -194,5 +194,8 @@ Nhược điểm:
 ![image](https://github.com/user-attachments/assets/f585370b-cb97-4191-8fc7-e982ac4a3744)
 
 2. I2C - HARDWARE :
-  
+ * tương tự như SPI , Các bước thực hiện là: Xác định các chân I2C -> Cấu hình GPIO -> Cấu hình I2C
+
+![image](https://github.com/user-attachments/assets/407157d0-59d1-4ff2-8bce-67d50b72ef6f)
+
 </details>
