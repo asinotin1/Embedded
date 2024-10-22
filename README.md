@@ -164,5 +164,6 @@ Nhược điểm:
 * 1 hoặc 2 stop bit(kéo chân Rx lên 1).
 </details>
 <details>
-  <sumary> </sumary>
+  <summary> CONFIG PERIPHERAL</summary>
+  
 </details>
