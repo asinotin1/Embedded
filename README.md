@@ -165,5 +165,9 @@ Nhược điểm:
 </details>
 <details>
   <summary> CONFIG PERIPHERAL</summary>
+  * Các giao thức trong chúng ta đều có thể triển khai bằng SOFTWARE và HARDWARE :
+   + SOFTWARE : thường dùng để mô phỏng lại quá trình giao thức đó hoạt động mà không cần phải sử dụng đến chân có sẵn trong mạch mà vẫn có thể biến các chân GPIO thành nó hay còn gọi là giả lập giao thức (em có để mô phỏng ở trên)
+   + HARDWARE : dùng các chân được tích hợp trong mạch giúp dễ dàng triển khai các chức năng của giao thức 
+* SPI - HARDWARE :
   
 </details>
