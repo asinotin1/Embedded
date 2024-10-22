@@ -197,5 +197,9 @@ Nhược điểm:
  * tương tự như SPI , Các bước thực hiện là: Xác định các chân I2C -> Cấu hình GPIO -> Cấu hình I2C
 
 ![image](https://github.com/user-attachments/assets/407157d0-59d1-4ff2-8bce-67d50b72ef6f)
++ cấu hình I2C :
+
+![image](https://github.com/user-attachments/assets/3b61633d-1859-46d4-ae49-0faa0ccec37f)
+
 
 </details>
