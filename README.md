@@ -180,6 +180,7 @@ Nhược điểm:
     vd : tôi chọn SPI1 thì cần cấu hình chân này :
     
     ![image](https://github.com/user-attachments/assets/1cd6a87e-6546-4b3b-ad23-059c1cce3af7)
+    
   b2. cấu hình tham số của SPI :
 
   ![image](https://github.com/user-attachments/assets/a17aac75-2ff3-498a-8cf7-a7f751b2ae0f)
