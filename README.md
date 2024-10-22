@@ -215,7 +215,8 @@ Nhược điểm:
 
 3. UART - HARDWARE :
 * Các bước cấu hình uart : xác định chân UART -> cấu hình chân GPIO -> Cấu hình UART
- + cấu hình chân GPIO
+ + cấu hình chân GPIO :
+
 ![image](https://github.com/user-attachments/assets/de2770b7-87f9-4b6d-b840-5e184e14c70b)
 
 ![image](https://github.com/user-attachments/assets/ce77d80c-9e50-43a6-9a3c-ff4dce77764c)
