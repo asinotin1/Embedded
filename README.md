@@ -201,5 +201,33 @@ Nhược điểm:
 
 ![image](https://github.com/user-attachments/assets/3b61633d-1859-46d4-ae49-0faa0ccec37f)
 
+* cấu hình truyền hoặc nhận :
+
+  ![image](https://github.com/user-attachments/assets/a886b2c3-935a-4415-bd44-2b28c43e699e)
+
+  ![image](https://github.com/user-attachments/assets/fa358374-99bb-4c8b-8fbc-8c338adcdd93)
+
+* một số hàm và cờ quan trọng :
+
+![image](https://github.com/user-attachments/assets/d7ce6cd0-0bbe-4210-a55a-209f1b052c63)
+
+![image](https://github.com/user-attachments/assets/7d2053b2-622b-491c-8532-67155d32bdc9)
+
+3. UART - HARDWARE :
+* Các bước cấu hình uart : xác định chân UART -> cấu hình chân GPIO -> Cấu hình UART
+ + cấu hình chân GPIO
+![image](https://github.com/user-attachments/assets/de2770b7-87f9-4b6d-b840-5e184e14c70b)
+
+![image](https://github.com/user-attachments/assets/ce77d80c-9e50-43a6-9a3c-ff4dce77764c)
+ + cấu hình uart :
+
+![image](https://github.com/user-attachments/assets/70ca7997-7653-42d6-8857-b385e260ffeb)
+
++ hàm truyền hoặc nhận :
+
+  ![image](https://github.com/user-attachments/assets/fbc63be8-3363-4eb9-84bc-e8e481046e48)
++ một số cờ quan trọng :
+
+![image](https://github.com/user-attachments/assets/22253543-2810-4578-acc6-7e216f89fb2e)
 
 </details>
