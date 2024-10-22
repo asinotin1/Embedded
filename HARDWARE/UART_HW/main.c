@@ -46,7 +46,7 @@ void UART_Init() {
     
     USART_Cmd(USART1, ENABLE);
 }
-void UART_(uint8_t *data, uint8_t length) {
+void UART_Transmit(uint8_t *data, uint8_t length) {
     for (uint8_t i = 0; i < length; i++) {
         while (USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET);// kiem tra xem co data trong bo nho dem khong
         
