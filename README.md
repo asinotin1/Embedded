@@ -300,7 +300,7 @@ Ngắt ngoài là 1 sự kiện ngắt xảy ra khi có tín hiệu can thiệp 
   
   + bật clock :
     
-  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA |RCC_APB2Periph_USART1,ENABLE);RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA |RCC_APB2Periph_USART1,ENABLE);
+  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA |RCC_APB2Periph_USART1,ENABLE);
   + cấu hình GPIO :
     
     ![image](https://github.com/user-attachments/assets/94e434ed-8f1a-47df-9671-b1bb9310f8e2)
