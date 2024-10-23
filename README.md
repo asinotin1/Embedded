@@ -292,5 +292,7 @@ Ngắt ngoài là 1 sự kiện ngắt xảy ra khi có tín hiệu can thiệp 
 
      ![image](https://github.com/user-attachments/assets/ce2e8acb-0135-4baa-ae8e-3c9a03d1ce4f)
       
-
+2. Ngắt truyền thông :
+* STM32F103 hỗ trợ các ngắt cho các giao thức như : SPI, I2C, UART ... các ngắt này giúp cho việc truyền hoặc nhận dữ liệu không bị sai sót và tránh bị mất dữ liệu
+* ở đây em sẽ vd về UART với ngắt nhận , các giao thức còn lại cũng tương tự như vậy :
 </details>
