@@ -233,4 +233,64 @@ Nhược điểm:
 </details>
 <details>
   <summary>LESSON 3: Ngắt ngoài và ngắt truyền thông</summary>
+* Ngắt là 1 sự kiện khẩn cấp xảy ra trong hay ngoài vi điều khiển. Nó yêu MCU phải dừng chương trình chính và thực thi chương trình ngắt. Hàm phục vụ ngắt.
+  
+* Sau khi xử lí xong nhiệm vụ này thì bộ đếm chương trình sẽ trả về giá trị trước đó để bộ xử lí thực hiện công việc còn đang dang dở. Như vậy, ngắt có mức độ ưu tiên cao nhất, thường xử lí các sự kiện bất ngờ nhưng không tốn thời gian. Ngắt có 2 loại: ngắt có thể xuất phát từ tín hiệu bên trong con chip(ngắt báo bộ đếm timer/counter tràn, ngắt báo quá trình gửi dữ liệu bằng RS232 kết) hoặc ngắt do các tác nhân bên ngoài(nhấn button, ngắt báo có 1 gói dữ liệu nhận được).
+
+VD : Cách chương trình chạy ngắt thực hiện :
+
+![image](https://github.com/user-attachments/assets/4b6982b5-09ed-4115-bcc8-01f7663c685f)
+
+1.Ngắt ngoài :
+Ngắt ngoài là 1 sự kiện ngắt xảy ra khi có tín hiệu can thiệp từ bên ngoài, từ phần cứng, người sử dụng hay ngoại vi...
+ * Ngắt ngoài của chip STM32F103 bao gồm có 16 line:
+
+![image](https://github.com/user-attachments/assets/a233d50d-402f-4d9b-a20c-fa07f0136527)
+  + mỗi line chỉ được gắn với một một port duy nhất và không thể cấu hình cho các port khác , vì thế chúng ta cần phải phân chia các line 1 cách phù hợp để không bị trùng ngắt.
+
+     vd : Line0 nếu chúng ta đã chọn chân PA0 (chân 0 ở port A) làm chân ngắt thì tất cả các chân 0 ở các Port khác không được khai báo làm chân ngắt ngoài nữa
+    
+  + các Line ngắt sẽ được phân vào các Vector ngắt tương ứng. Các Line ngắt của chip STM32F103 được phân bố vào các vector ngắt như sau:
+    
+    ![image](https://github.com/user-attachments/assets/bdca1584-d56a-4a1a-b6cb-1ae6779c7ec7)
+    
+    + Các Line0, Line1, Line2, Line3, Line4 sẽ được phân vào các vector ngắt riêng biệt EXTI0, EXTI1, EXTI2, EXTI3, EXTI4, còn từ Line5->Line9 sẽ được phân vào vector ngắt EXTI9_5, Line10->Line15 được phân vào vecotr EXTI15_10.
+
+    + các ngắt quyết định mức độ thực hiện thông qua mức độ ưu tiên :
+       + ngắt nào có độ ưu tiên cao hơn thì ngắt đó thực hiên trước.
+       + MCU sẽ kiểm tra ngắt có cùng một mức Preemption Priority thì ngắt nào có Sub Priority cao hơn thì ngắt đó được thực hiện trước.
+       + Còn trường hợp 2 ngắt có cùng mức Preemption và Sub Priority luôn thì ngắt nào đến trước được thực hiện trước.
+      
+* Để sử dụng ngắt ngoài ta thực hiện các bước sau: Xác định các chân ngắt ngoài -> Cấu hình các chân GPIO
+   + Trước tiên muốn sử dung bất cứ ngoại vi nào thì mình phải bật Clock của bus gắn với ngoại vi đó, ngoài ra phải bật thêm AFIO. AFTO là những cái funtion thay thế. 
+      + cấu hình RCC :
+        
+     ![image](https://github.com/user-attachments/assets/980a360c-bc39-4a22-80bf-24ebd0a3f0f8)
+
+      + sau đó cấu hình GPIO:
+     
+     ![image](https://github.com/user-attachments/assets/54033f18-9f32-472a-9115-a91c1c95bf22)
+
+      + Cấu hình NVIC :
+        trước hết chúng ta cần phải tra bảng NVIC:
+        
+        ![image](https://github.com/user-attachments/assets/de5d5a22-d9d6-41cf-adab-77c3292b3755)
+        
+        Sau đó cấu hình NVIC tùy theo Group và mức độ ưu tiên khi tra :
+        
+        ![image](https://github.com/user-attachments/assets/82e0fdca-fe35-4caa-bba3-9e88cf93e11f)
+
+        vd : ![image](https://github.com/user-attachments/assets/6ca07c33-f3a8-4b02-af8e-80402349cf6a)
+
+     + cấu hình EXTI :
+       
+       ![image](https://github.com/user-attachments/assets/8aa8a1a4-76a3-4a55-ae61-934d721f832d)
+
+       VD : ![image](https://github.com/user-attachments/assets/61853b7b-49a8-44bd-b28b-454a5ae6ec34)
+
+     + sau cùng là hàm phục vụ ngắt ngoài : EXTIx_IRQHandler() (x là line ngắt tương ứng), Hàm EXTI_GetITStatus(EXTI_Linex) :Kiểm tra cờ ngắt của line x tương ứng. Hàm EXTI_ClearITPendingBit(EXTI_Linex): Xóa cờ ngắt ở line x.
+
+     ![image](https://github.com/user-attachments/assets/ce2e8acb-0135-4baa-ae8e-3c9a03d1ce4f)
+      
+
 </details>
