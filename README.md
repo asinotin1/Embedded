@@ -295,4 +295,27 @@ Ngắt ngoài là 1 sự kiện ngắt xảy ra khi có tín hiệu can thiệp 
 2. Ngắt truyền thông :
 * STM32F103 hỗ trợ các ngắt cho các giao thức như : SPI, I2C, UART ... các ngắt này giúp cho việc truyền hoặc nhận dữ liệu không bị sai sót và tránh bị mất dữ liệu
 * ở đây em sẽ vd về UART với ngắt nhận , các giao thức còn lại cũng tương tự như vậy :
+  
+  các bước cấu hình ngắt uart như sau : cấu hình chân GPIO -> cấu hình NVIC -> Cấu hình uart.
+  
+  + bật clock :
+    
+  RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA |RCC_APB2Periph_USART1,ENABLE);RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOA |RCC_APB2Periph_USART1,ENABLE);
+  + cấu hình GPIO :
+    
+    ![image](https://github.com/user-attachments/assets/94e434ed-8f1a-47df-9671-b1bb9310f8e2)
+    
+  + cấu hình NVIC :
+    
+    ![image](https://github.com/user-attachments/assets/6a2628fc-b85c-4d77-9b1c-dfeeef49bad5)
+    
+  + cấu hình uart :
+
+    ![image](https://github.com/user-attachments/assets/c43d8978-4306-4d08-b3e1-a9792a7d7b8f)
+
+  + hàm ngắt uart :
+    
+    ![image](https://github.com/user-attachments/assets/d1c95439-f349-4623-ac24-0cdb679049a4)
+ 
+    + Trong hàm phục vụ ngắt, ta kiểm tra ngắt đến là ngắt nhận RXNE hay ngắt truyền TX, bằng  hàm USART_GetITStatus. Tùy theo tín hiệu ngắt mà có thể lập trình tác vụ khác nhau. Sau khi thực thi xong, có thể xóa cờ ngắt để đảm bảo không còn ngắt trên line (thông thường cờ ngắt sẽ tự động xóa).
 </details>
