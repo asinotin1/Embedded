@@ -321,4 +321,35 @@ Ngắt ngoài là 1 sự kiện ngắt xảy ra khi có tín hiệu can thiệp 
 </details>
 <details>
   <summary>LESSON 4: ADC </summary>
+  Vi điều khiển hay các thiết bị ngày nay đều sử dụng tín hiệu số dựa trên các bit nhị phân để hoạt động. Còn thực tế thì không chỉ mãi là tín hiệu số mà là tín hiệu tương tự và liên tục vì vậy cần phải có thiết bị chuyển đổi từ tín hiệu tương tự sang tín hiệu số. *ADC - Analog to Digital Convert*: bộ chuyển đổi từ tín hiệu tương tự sang tín hiệu số
+
+![image](https://github.com/user-attachments/assets/6369b5d8-2b97-4c49-b384-ceabcd2db3d3)
+
+Khả năng chuyển đổi của ADC phụ thuộc vào 2 yếu tố
+ + Độ phân giải: Số bit mà ADC sử dụng để mã hóa tín hiệu. Hay còn gọi là số mức tín hiệu được biểu diễn(có độ phân giải càng cao thì độ chính xác càng lớn.)
+ + Tần số/Chu kì lấy mẫu: tốc độ/khoảng thời gian giữa 2 lần mã hóa(tần số lấy mẫu càng cao thì chuyển đổi sẽ có độ chính xác càng lớn). Tần số lấy mẫu = 1/(thời gian lấy mẫu + thời gian chuyển đổi).
+Trong stm32 có 2 kênh ADC đó là ADC1 và ADC2, mỗi bộ có tối đa 9 channel với nhiều mode hoạt động, kết quả chuyển đổi được lưu trong thanh ghi 16 bit.
+ + Độ phân giải: 12 bit
+ + Có các ngắt hổ trợ, có thể điều khiển hoạt động ADC bằng xung Trigger.
+ + Thời gian chuyển đổi nhanh: 1us tại tần số 65Mhz.
+ + Có bộ DMA giúp tăng tốc độ xử lí Sơ đồ khối bộ ADC:
+
+![image](https://github.com/user-attachments/assets/a4ca6023-cb18-47e8-8baa-7a69def828c0)
+
+Các bước thực hiện ADC :
+
+Cấu hình GPIO -> Cấu hình ADC
+
+ + xác định chân và port :
+![image](https://github.com/user-attachments/assets/325f6f30-0f71-43e2-9779-b8edb0bc2a6a)
+
+ + Các chế độ của ADC:
+   + Single: ADC chỉ đọc 1 kênh duy nhất, và chỉ đọc khi kênh nào được yêu câu.
+   + Single Continous: sẽ đọc 1 kênh duy nhất, nhưng đọc dữ liệu nhiều lần
+   + Scan: Multi-Channels: Quét qua và đọc dữ liệu nhiều kênh, nhưng chỉ đọc khi nào được yêu cầu.
+   + Scan: Continous Multi-Channels Repeat: Quét qua và đọc dữ liệu nhiều kênh, nhưng đọc liên tiếp nhiều lần giống như Single Continous.
+
+![image](https://github.com/user-attachments/assets/e6174bc2-da3b-42f0-a1a2-dbcba43ba2ea)
+
+
 </details>
