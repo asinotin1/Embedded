@@ -352,5 +352,30 @@ Cấu hình GPIO -> Cấu hình ADC
 ![image](https://github.com/user-attachments/assets/e6174bc2-da3b-42f0-a1a2-dbcba43ba2ea)
 </details>
 <details>
-  <summary>LESSON 5: </summary>
+  <summary>LESSON 5: DMA </summary>
+  * DMA – Direct memory access được sử dụng với mục đích truyền data với tốc độ cao từ thiết bị ngoại vi đến bộ nhớ cũng như từ bộ nhớ đến bộ nhớ
+  * Với DMA, dữ liệu sẽ được truyền đi nhanh chóng mà không cần đến bất kỳ sự tác động nào của CPU. Điều này sẽ giữ cho tài nguyên của CPU được rảnh rỗi cho các thao tác khác. Đồng thời tránh việc data nhận về từ ngoại vi bị mất mát
+  
+  ![image](https://github.com/user-attachments/assets/6486c7a3-a68c-4935-91d3-df3c1b6564c2)
+
+  * DMA có thể điều khiển data truyền từ :
+    + Bộ nhớ đến Peripheral
+    + Ngược lại, Periph đến Bộ nhớ.
+    + Giữa 2 vùng nhớ.
+  * Sơ đồ khối bộ DMA :
+
+    ![image](https://github.com/user-attachments/assets/4efaf9d9-aef4-4c68-a1a3-b47772a78db6)
+  * STM32F1 có 2 bộ DMA với nhiều kênh, mỗi kênh có nhiều ngoại vi có thể dùng DMA như bảng:
+
+    ![image](https://github.com/user-attachments/assets/df2194b2-25f5-4328-91e9-6b7691982600)
+    ●	Các Channel đều có thể được cấu hình riêng biệt.
+    ●	Mỗi Channel được kết nối để dành riêng cho tín hiệu DMA từ các thiết bị ngoại vi hoặc tín hiệu từ bên trong MCU.
+    ●	Có 4 mức ưu tiên có thể lập trình cho mỗi Channel.
+    ●	Kích thước data được sử dụng là 1 Byte, 2 Byte (Half Word) hoặc 4byte (Word)
+    ●	Hỗ trợ việc lặp lại liên tục Data.
+    ●	5 cờ báo ngắt (DMA Half Transfer, DMA Transfer complete, DMA Transfer Error, DMA FIFO Error, Direct Mode Error).
+    ●	Quyền truy cập tới Flash, SRAM, APB1, APB2, APB.
+    ●	Số lượng data có thể lập trình được lên tới 65535.
+    ●	Đối với DMA2, mỗi luồng đều hỗ trợ để chuyển dữ liệu từ bộ nhớ đến bộ nhớ
+
 </details>
