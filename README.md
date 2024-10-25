@@ -368,14 +368,27 @@ Cấu hình GPIO -> Cấu hình ADC
   * STM32F1 có 2 bộ DMA với nhiều kênh, mỗi kênh có nhiều ngoại vi có thể dùng DMA như bảng:
 
     ![image](https://github.com/user-attachments/assets/df2194b2-25f5-4328-91e9-6b7691982600)
+    
     ●	Các Channel đều có thể được cấu hình riêng biệt.
+    
     ●	Mỗi Channel được kết nối để dành riêng cho tín hiệu DMA từ các thiết bị ngoại vi hoặc tín hiệu từ bên trong MCU.
+    
     ●	Có 4 mức ưu tiên có thể lập trình cho mỗi Channel.
+    
     ●	Kích thước data được sử dụng là 1 Byte, 2 Byte (Half Word) hoặc 4byte (Word)
+    
     ●	Hỗ trợ việc lặp lại liên tục Data.
+    
     ●	5 cờ báo ngắt (DMA Half Transfer, DMA Transfer complete, DMA Transfer Error, DMA FIFO Error, Direct Mode Error).
+    
     ●	Quyền truy cập tới Flash, SRAM, APB1, APB2, APB.
+    
     ●	Số lượng data có thể lập trình được lên tới 65535.
+    
     ●	Đối với DMA2, mỗi luồng đều hỗ trợ để chuyển dữ liệu từ bộ nhớ đến bộ nhớ
+ * DMA có 2 chế độ hoạt động :
+   + Normal mode: Với chế độ này, DMA truyền dữ liệu cho tới khi truyền đủ 1 lượng dữ liệu giới hạn đã khai báo DMA sẽ dừng hoạt động. Muốn nó tiếp tục hoạt động thì phải khởi động lại
+   
+   + Circular mode: Với chế độ này, Khi DMA truyền đủ 1 lượng dữ liệu giới hạn đã khai báo thì nó sẽ truyền tiếp về vị trí ban đầu (Cơ chế như Ring buffer).
 
 </details>
