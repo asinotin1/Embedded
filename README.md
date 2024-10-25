@@ -350,5 +350,7 @@ Cấu hình GPIO -> Cấu hình ADC
    + Scan: Continous Multi-Channels Repeat: Quét qua và đọc dữ liệu nhiều kênh, nhưng đọc liên tiếp nhiều lần giống như Single Continous.
 
 ![image](https://github.com/user-attachments/assets/e6174bc2-da3b-42f0-a1a2-dbcba43ba2ea)
-
+</details>
+<details>
+  <summary> </summary>
 </details>
