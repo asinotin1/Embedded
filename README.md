@@ -352,5 +352,5 @@ Cấu hình GPIO -> Cấu hình ADC
 ![image](https://github.com/user-attachments/assets/e6174bc2-da3b-42f0-a1a2-dbcba43ba2ea)
 </details>
 <details>
-  <summary> </summary>
+  <summary>LESSON 5: </summary>
 </details>
