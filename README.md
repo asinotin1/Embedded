@@ -397,3 +397,6 @@ Cấu hình GPIO -> Cấu hình ADC
 
 + Sau khi cấu hình cho DMA xong, chỉ cần gọi hàm DMA_Cmd cho ngoại vi tương ứng. Bộ DMA sẽ tự động truyền nhận data cũng như ghi dữ liệu vào vùng nhớ cụ thể. 
 </details>
+<details>
+  <summary>LESSON 6: </summary>
+</details>
