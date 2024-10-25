@@ -399,4 +399,31 @@ Cấu hình GPIO -> Cấu hình ADC
 </details>
 <details>
   <summary>LESSON 6: Timer & PWM </summary>
+  + timer là 1 mạch digital logic có vai trò đếm mỗi chu kỳ clock (đếm lên hoặc đếm xuống).
+  
+  + Timer còn có thể hoạt động ở chế độ counter, nó sẽ nhận xung clock từ các tín hiệu ngoài. Có thể là từ 1 nút nhấn, bộ đếm sẽ được tăng sau mỗi lần bấm nút (sườn lên hoặc sườn xuống tùy vào cấu hình).
+  
+  + STM32f103C8 có tất cả 7 timer nhưng trong đó đã bao gồm 1 systick timer, 2 watchdog timer. Vậy chỉ còn lại 4 timer dùng cho các chức năng như ngắt, timer base, PWM, Encoder, Input capture
+  
+  + TIM1 là Timer đặc biệt, chuyên dụng cho việc xuất xung với các mode xuất xung, các mode bảo vệ đầy đủ hơn so với các timer khác. TIM1 thuộc khối clock APB2
+  
+  + TIM2,TIM3,TIM4 thuộc nhóm APB1.
+    
+  + ![image](https://github.com/user-attachments/assets/8dec8c19-2755-43e0-b802-4448119d8b21)
+
+    + Khi không có cấu hình gì liên quan đến clock và đã gắn đúng thạch anh ngoài trên chân PD0(5) và PD1(6) thì clock tương ứng của TIM1,TIM2,TIM3,TIM4 đã là 72Mhz. Cần ghi nhớ là sử dụng timer nào thì cấp clock cho timer đó theo đúng nhánh clock.
+   
+    + Prescaler là bộ chia tần số của timer, giá trị tối đa là 65535. Các giá trị này có thể được thay đổi và điều chỉnh bằng lập trình
+   
+    + Auto Reload value là giá trị bộ đếm tối đa có thể được điều chỉnh để nạp vào cho timer. Giá trị bộ đếm này được cài đặt tối đa là 16bit tương ứng với giá trị là 65535.
+
+    + FTIMER= fSYSTEM/[(PSC+1)(Period+1)]
+
+    ![image](https://github.com/user-attachments/assets/c10a0585-88e9-4ccc-aa89-55befe304c1a)
+
+    cấu hình timer :
+    
+    ![image](https://github.com/user-attachments/assets/4f7afb24-fa55-4c7b-9c71-9c346e97c52b)
+
+    7199 tương ứng với giá trị PSC, 9999 tương ứng với Period. Clock cung cấp cho TIM4 là 72Mhz. Tính theo công thức ta sẽ được thời gian ngắt tràn là 1s. 
 </details>
