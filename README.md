@@ -1,4 +1,4 @@
-<details>
+![image](https://github.com/user-attachments/assets/dcc4ec9b-4188-4901-be5a-22e2e99c6bbb)<details>
   <summary>LESSON 1: GPIO</summary>
   Để sử dụng ngoại vi GPIO ta cần thực hiện các bước sau :
   
@@ -478,5 +478,41 @@ Tổ chức bộ nhớ STM32
    + Vùng nhớ SRAM: sử dụng để kế nối Sram trên chip, dùng để lưu dữ liệu tạm thời khi run-time.
 
    ![image](https://github.com/user-attachments/assets/65273a4a-0ff3-42e6-bbd7-6ce2ad519be5)
+
+  * Địa chỉ bộ nhớ Flash bắt đầu 0x00000000 nhưng trong vi điều khiển STM32, vùng nhớ code bắt đầu từ địa chỉ 0x0800 0000 khi mình nạp xuống thì nó sẽ mặc định nạp chương trình từ địa chỉ này, với MSP ở 0x0800 0000 và Vector Table bắt đầu từ địa chỉ 0x0800 0004 (Reset_Handler).
+
+![image](https://github.com/user-attachments/assets/5fa1258f-8f66-48fc-86aa-9207916457c6)
+
+Vi điều khiển STM32F1 cung cấp 128/64Kb, ngoài lưu trữ MSP, Vector Table, bộ nhớ Flash sẽ lưu trữ vùng nhớ chương trình ứng dụng của chúng ta, cùng với đó là vùng data.
+
+👉Để thao tác với bộ nhớ hiệu quả thì bộ nhớ Flash trong STM32 chia thành các Page, mỗi Page có kích thước 1Kb.
+
+👉Bộ nhớ Flash có thể được thao tác ghi trên từng word(2bytes/4bytes) nhưng lại chỉ có thể xóa theo từng Page =>Vì vậy , chúng ta có thể thực hiện Bootloader bằng cách cài đặt chương trình Bootloader ở một Page nào đó, chẳng hạn như Page0, Và cùng lúc đó đặt Firmware application 1 vào Page1, Firmware application 2 vào Page2, Firmware application 3 vào Page3.
+
+![image](https://github.com/user-attachments/assets/6a3b585c-ad43-4831-87a0-cb54dbbd7685)
+
+Chúng ta sẽ bắt đầu với chương trình Bootloader, được đặt tại địa chỉ 0x0800 0000. Ngoài ra, chúng ta thấy sự xuất hiện của 3 Firmware khác:
+
+ + Factory Firmare: là phiên bản đầu tiên của Firmware mà nhà sản xuất cung cấp cho người dùng.
+
+ + Current Firmware: là phiên bản hiện tại của Firmware đang chạy trên vi điều khiển, được chúng ta lưu trên 1 Page nào đó.
+
+ + FOTA Firmware: là phiên bản cập nhật mới của firmware.
+
+File nhị phân :
+
+Có một số định dạng file nhị phân thường gặp là: .BIN, .ELF, .HEX
+
+![image](https://github.com/user-attachments/assets/a076bb80-5dfe-43bc-85cb-4185958f44a1)
+
+![image](https://github.com/user-attachments/assets/d2a26374-af43-4aaf-b240-e20e5d8e0c79)
+
+![image](https://github.com/user-attachments/assets/186ce96f-db6e-4da6-a051-578baf62aaf5)
+
+![image](https://github.com/user-attachments/assets/34014057-c1fe-4846-b692-96c247638e18)
+
+* Data: Phần này là dữ liệu sẽ lưu lên FLASH, số byte sẽ được quy định ở trường Byte Count. Checksum: gồm 2 chữ số, dùng để kiểm tra lỗi. Theo quy định thì một line sẽ đúng khi mà byte checksum sẽ bằng đảo của tổng tất cả các byte còn lại cùng dòng, cộng thêm 1.
+
+Có 3 loại thao tác với bộ nhớ Flash: đọc - Read, ghi - Write, xóa - Delete.
 
 </details>
