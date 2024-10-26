@@ -425,5 +425,42 @@ Cấu hình GPIO -> Cấu hình ADC
     
     ![image](https://github.com/user-attachments/assets/4f7afb24-fa55-4c7b-9c71-9c346e97c52b)
 
-    7199 tương ứng với giá trị PSC, 9999 tương ứng với Period. Clock cung cấp cho TIM4 là 72Mhz. Tính theo công thức ta sẽ được thời gian ngắt tràn là 1s. 
+    7199 tương ứng với giá trị PSC, 9999 tương ứng với Period. Clock cung cấp cho TIM4 là 72Mhz. Tính theo công thức ta sẽ được thời gian ngắt tràn là 1s.
+    
+   + PWM - Pulse Width Modulation là phương pháp điều chỉnh độ rộng của xung có chu kì cố định, nhằm tạo ra sự thay đổi điện áp tại đầu ra.
+     
+   + PWM ứng dụng nhiều trong việc điều khiển động cơ, các bộ nguồn xung boot, buck, nghịch lưu 1 pha, 3 pha…
+
+   + Trong mỗi Timer có 4 kênh độc lập phát PWM
+
+   + Chu kì xung của PWM được quản lý bằng thanh ghi PSC và thanh ghi ARR.
+
+   +  Duty Cycles được quản lý bằng thanh ghi CCR
+
+   +  Tín hiệu PWM có hai yếu tố quan trọng:
+     
+      + Tần số: Là số lần tín hiệu lặp lại trong một giây. Đối với servo, tần số thông thường là 50Hz (tức là, chu kỳ lặp lại sau mỗi 20ms).
+
+      + Độ rộng xung (Pulse Width ): Là thời gian tín hiệu ở mức cao trong mỗi chu kỳ. Độ rộng xung thường được đo bằng microsecond (µs) và quyết định góc mà servo sẽ xoay đến.Tỉ lệ độ rộng xung với chu kì xung gọi là chu kì nhiệm vụ(Duty Cycle).
+
+  ![image](https://github.com/user-attachments/assets/79e870ae-9320-4df1-aecd-bac0ba9fa909)
+
+  + cấu hình PWM : chúng ta cần phải xác định các chân của chip có pwm thông qua datasheet
+    
+    vd : stm32f103c8t6
+    
+    ![image](https://github.com/user-attachments/assets/88c0e9cd-dffd-4daa-a15f-784655d5a76b)
+
+  + Timer có hỗ trợ chế độ PWM, ngõ ra của xung sẽ được xuất trên các chân GPIO tương ứng với từng kênh của Timer, Mode thường dùng là AF_PP.
+Phải cấu hình cho các chân này, đồng thời bật RCC cho AFIO.
+
+![image](https://github.com/user-attachments/assets/3f4d1b0d-ef7e-4d77-bc32-d0eb15ae5f2d)
+
+![image](https://github.com/user-attachments/assets/0ee997f4-07aa-4bb8-849a-d114ad4513ba)
+
+![image](https://github.com/user-attachments/assets/d17f643e-6fd1-4c17-9dfc-94e371c6cd1d)
+
+
+
+       
 </details>
