@@ -459,8 +459,24 @@ Phải cấu hình cho các chân này, đồng thời bật RCC cho AFIO.
 ![image](https://github.com/user-attachments/assets/0ee997f4-07aa-4bb8-849a-d114ad4513ba)
 
 ![image](https://github.com/user-attachments/assets/d17f643e-6fd1-4c17-9dfc-94e371c6cd1d)
-
-
-
        
+</details>
+<details>
+  <summary> LESSON 7: Flash & BootLoader</summary>
+  Nguồn tham khảo: Lập trình điện tử Chắc hẳn các bạn đã từng nghe quá trình boot trong máy tính, nó là một phần quan trọng giúp cho việc khởi động hệ điều hành máy tính. Bootloader là phần mềm quan trọng nạp vào máy tính trước khi khởi động. Ta học vi điều khiển phải cần biến đến Bootloader 👉Rỏ ràng máy tính cũng xử dụng nhiều vi xử lí, Bootloader như một firmware nạp sẵn, trước khi máy tính khởi động thì cái firmware này sẽ được gọi, Vi điểu khiển của chúng ta cũng sử dụng lõi vi xử và khi khởi động thì nó sẽ bắt đầu từ đâu?
+
+![image](https://github.com/user-attachments/assets/9db7364e-40ed-4bb6-9fdc-15efe807e1af)
+
+Nếu có một chương trình bootloader nạp vào trong vi điều khiển, thì trước tiên nó nhảy vào chương trình bootloader thực hiện một số công việc, sau đó mới thực hiện Application.
+
+Tổ chức bộ nhớ STM32
+
+ * Hiểu được tổ chức bộ nhớ STM32 rất quan trọng trong bootloader. Chúng ta cần nắm chương trình boot nằm ở địa chỉ nào, chương trình nằm ở địa chỉ nào và cách phân chia Page của bộ nhớ FLash(stm32f1). Trong vi điều khiển STM có 2 bộ nhớ cần được quan tâm là: bộ nhớ chương trình và bộ nhớ dữ liệu:
+   
+   + Vùng nhớ code: có thể là FLASH/EEPROM/ROM/OTP,... dùng để lưu code và các lệnh của chương trình
+     
+   + Vùng nhớ SRAM: sử dụng để kế nối Sram trên chip, dùng để lưu dữ liệu tạm thời khi run-time.
+
+   ![image](https://github.com/user-attachments/assets/65273a4a-0ff3-42e6-bbd7-6ce2ad519be5)
+
 </details>
