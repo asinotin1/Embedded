@@ -1,4 +1,4 @@
-<detail>
+<details>
   <summary>LESSON 1: GPIO</summary>
   Để sử dụng ngoại vi GPIO ta cần thực hiện các bước sau :
   
