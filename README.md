@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/dcc4ec9b-4188-4901-be5a-22e2e99c6bbb)<details>
+
   <summary>LESSON 1: GPIO</summary>
   Để sử dụng ngoại vi GPIO ta cần thực hiện các bước sau :
   
