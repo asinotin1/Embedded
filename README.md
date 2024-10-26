@@ -514,5 +514,8 @@ Có một số định dạng file nhị phân thường gặp là: .BIN, .ELF, 
 * Data: Phần này là dữ liệu sẽ lưu lên FLASH, số byte sẽ được quy định ở trường Byte Count. Checksum: gồm 2 chữ số, dùng để kiểm tra lỗi. Theo quy định thì một line sẽ đúng khi mà byte checksum sẽ bằng đảo của tổng tất cả các byte còn lại cùng dòng, cộng thêm 1.
 
 Có 3 loại thao tác với bộ nhớ Flash: đọc - Read, ghi - Write, xóa - Delete.
-
+</details>
+<details>
+  <summary> LESSON 8 : Can</summary>
+  
 </details>
