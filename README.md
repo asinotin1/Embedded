@@ -516,6 +516,22 @@ Có một số định dạng file nhị phân thường gặp là: .BIN, .ELF, 
 Có 3 loại thao tác với bộ nhớ Flash: đọc - Read, ghi - Write, xóa - Delete.
 </details>
 <details>
-  <summary> LESSON 8 : Can</summary>
-  
+<summary> LESSON 8 : CAN</summary>
+* Controller Area Network (CAN) là giao thức giao tiếp nối tiếp hỗ trợ mạnh cho những hệ thống điều khiển thời gian thực phân bố (distributed realtime control system).
+
+  * Là chuẩn truyền thông nối tiếp, bán song công ,bất đồng , tốc độ cao.
+
+  * CAN gồm 2 dây (CAN-H & CAN-L)
+
+  * CAN gồm 4 chế độ(Mode) :
+    
+    + Data Frame(khung dữ liệu): gửi dữ liệu đến 1 node.
+      
+    + Romote Frame(khung yêu cầu hay khung điều khiển): gửi yêu cầu đến 1 node và yêu cầu 1 node gửi lại.
+      
+    + Error Frame: Khi một node phát hiện lỗi CRC thì ngay lập tức nó sẽ không gửi data mà nó sẽ gửi một Error Frame tới các node khác để thông báo lỗi, các node khác nhận thông báo này sẽ tìm biện pháp xử lí hoặc thông báo lỗi.
+       
+    + Overflow Frame(khung báo tràn): một node trong mạng gặp trình trạng quá tải(nguyên nhân có thể do 2 node cùng truyền tạo ra quá tải thì 1 node sẽ gửi 1 overflow frame tới các node khác , các node khác nhận được thông báo này sẽ điều chỉnh tốc độ truyền. 
+![image](https://github.com/user-attachments/assets/39abec11-8159-42d9-a844-be013e5c64ee)
+
 </details>
