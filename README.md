@@ -583,5 +583,24 @@ Có 3 loại thao tác với bộ nhớ Flash: đọc - Read, ghi - Write, xóa 
 
  ![image](https://github.com/user-attachments/assets/c4aa5014-9bf8-48d5-83d3-0f0d92b26567)
 
+* cấu hình CAN :
+
+vẫn như mọi giao thức đều cần check datasheet :
+
+![image](https://github.com/user-attachments/assets/159ac9b7-034d-4822-9a25-827d75cc5a74)
+
+![image](https://github.com/user-attachments/assets/8e2390e3-e9d5-4980-bad4-d949fd769f0a)
+
+![image](https://github.com/user-attachments/assets/ec273fd9-7081-4b78-a34c-dbecb79b3f7f)
+
+![image](https://github.com/user-attachments/assets/70046dbc-48f8-4b16-a54a-803bd4ec0532)
+
+Tốc độ truyền CAN = 1/(SJW+BS1+BS2) .
+
+![image](https://github.com/user-attachments/assets/d8478a20-8b9d-42ae-8492-1461c45784f6)
+
+* các hàm truyền nhận :
+
+![image](https://github.com/user-attachments/assets/11e934bc-8762-4b8a-80a7-d52f8ce8e85f)
 
 </details>
