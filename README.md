@@ -532,6 +532,56 @@ Có 3 loại thao tác với bộ nhớ Flash: đọc - Read, ghi - Write, xóa 
     + Error Frame: Khi một node phát hiện lỗi CRC thì ngay lập tức nó sẽ không gửi data mà nó sẽ gửi một Error Frame tới các node khác để thông báo lỗi, các node khác nhận thông báo này sẽ tìm biện pháp xử lí hoặc thông báo lỗi.
        
     + Overflow Frame(khung báo tràn): một node trong mạng gặp trình trạng quá tải(nguyên nhân có thể do 2 node cùng truyền tạo ra quá tải thì 1 node sẽ gửi 1 overflow frame tới các node khác , các node khác nhận được thông báo này sẽ điều chỉnh tốc độ truyền. 
-![image](https://github.com/user-attachments/assets/39abec11-8159-42d9-a844-be013e5c64ee)
+
+* Trong mạng CAN các thiết bị trong mạng gọi là node. Một node bao gồm:
+  
+  + Micro-controller: chịu trách nhiệm truyền nhận, xử lí data.
+  
+  + CAN Controller: thực hiện chức năng của CAN (CAN Tx & CAN Rx).
+    
+  + CAN Tranceiver: cấp điện áp cho bus
+
+ ![image](https://github.com/user-attachments/assets/48489e2e-0f88-488c-ac95-7f294c762ef5)
+
+ ![image](https://github.com/user-attachments/assets/67d0a843-29eb-473e-8bf3-d43bcd28622e)
+
+ * CANTx & CANRx: là những digital signals.
+  
+ * Ta không có sử dụng những tín hiệu này để giao tiếp với các node khác mà sẽ sử dụng differential signals để giao tiếp với các node khác.
+
+ * Lí do: Mặc dù digital signals nó sử dụng ít dây hơn(1 dây) nhưng nó là tín hiệu điện, những tín hiệu 1 đầu có thể tạo ra nhiễu. Còn những differential signals truyền bằng 2 tín hiệu bổ sung, mỗi tín hiệu sẽ có dây dẫn riêng nếu có sự chênh lệch thì máy thu sẽ phản ứng (ví dụ: khi có nhiễu ở kênh này thì kênh kia bổ sung rồi 2 tín hiệu OR lại tạo thành *clean signals)
+
+ * Trong một thời điểm chỉ có 1 node truyền và các node khác phải nhận.
+
+* nguyên tắc xác định bit 0 và bit 1 trong CAN :
+  
+   + sự chênh lệch điện áp của 2 dây CAN H và CAN L tạo ra bit 1
+     
+     ![image](https://github.com/user-attachments/assets/a963448e-d145-448e-8d2e-074e532bd5ef)
+
+   + Cả 2 dây có cùng mức điện áp tạo bit 0
+
+     ![image](https://github.com/user-attachments/assets/976c38d9-b113-4b0d-a9f0-8496d7603f36)
+
+* ID càng thấp thì có độ ưu tiên càng cao :
+
+   + Trong trường hợp nhiều node, thì node có ID thấp thì node đó được ưu tiên truyền trước.ID có thể được code
+
+  Ví dụ có 3 node:
+
+  Node A: 0100101 (7 bits)
+
+  Node B: 0010010 (7 bits)
+
+  Node C: 0010100 (7 bits)
+
+   * Thì node B được ưu tiên truyền trước vì ID nó nhỏ nhất
+ 
+* Data Frame của CAN Phiên bản normal :
+
+ ![image](https://github.com/user-attachments/assets/39bfc97b-d392-49d8-b03b-4535ba16eb93)
+
+ ![image](https://github.com/user-attachments/assets/c4aa5014-9bf8-48d5-83d3-0f0d92b26567)
+
 
 </details>
