@@ -8,8 +8,7 @@
 #define SCL GPIO_Pin_6  
 #define SDA GPIO_Pin_7  
 
-#define Master 0x00
-
+#define SLAVE 0x44
 
 uint8_t arr[4] = {1, 3, 5, 7};
 void RCC_Config()
@@ -54,16 +53,16 @@ void I2C_Stop()
 void I2C_Transmit(uint8_t *data, uint8_t length) {
     I2C_Star();
 	
-    I2C_Send7bitAddress(I2C1, Master, I2C_Direction_Transmitter);// gui dia chi master
+    I2C_Send7bitAddress(I2C1, 0x44, I2C_Direction_Transmitter);// gui dia chi slave
 	
 	
-	  while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)); // cho master vao che do truyen
+	  while (!I2C_CheckEvent(I2C1, I2C_EVENT_MASTER_TRANSMITTER_MODE_SELECTED)); // cho slave tra ack
 	
     for (uint8_t i = 0; i < length; i++) 
 	       {
         I2C_SendData(I2C1, data[i]);
 						
-        while (!I2C_GetFlagStatus(I2C1, I2C_FLAG_BTF)); // Cho du lieu duoc goi
+        while (!I2C_GetFlagStatus(I2C1, I2C_FLAG_BTF)); // Cho du lieu truyen hoan toan
         }
 		
 		I2C_Stop();
