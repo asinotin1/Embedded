@@ -17,12 +17,12 @@ void GPIO_Config(void) {
     GPIO_InitTypeDef GPIO_InitStructure;
 
  
-    GPIO_InitStructure.GPIO_Pin = SPI1_SCK | SPI1_MOSI | SPI1_NSS ;
+    GPIO_InitStructure.GPIO_Pin = SPI1_SCK |SPI1_MISO  ;
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN_FLOATING;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(SPI1_GPIO, &GPIO_InitStructure);
 	   
-	  GPIO_InitStructure.GPIO_Pin = SPI1_MISO;
+	  GPIO_InitStructure.GPIO_Pin = SPI1_MOSI| SPI1_NSS;
 	  GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	  GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF_PP;
 	  GPIO_Init(SPI1_GPIO, &GPIO_InitStructure);
