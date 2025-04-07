@@ -17,7 +17,7 @@ void GPIO_Configuration()
 	GPIO_Initstructure.GPIO_Pin = GPIO_Pin_0;
 	/*Ch�n GPIO duoc cau h�nh l�m dau v�o v� o trang th�i noi (kh�ng pull-up hay pull-down). 
 	�ieu n�y c� nghia l� ch�n kh�ng duoc ket noi co dinh voi mc cao (VDD) hoac muc thap (GND) th�ng qua dien tro*/
-	GPIO_Initstructure.GPIO_Mode = GPIO_Mode_IN_FLOATING; 
+	GPIO_Initstructure.GPIO_Mode = GPIO_Mode_IPD; 
 	GPIO_Initstructure.GPIO_Speed = GPIO_Speed_50MHz;
 	
 	
